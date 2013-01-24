@@ -30,7 +30,7 @@
 <body>
 <header>
     <nav>
-        <figure><img src="themes/images/groupon-logo1.png"/></a></figure>
+        <figure><img src="themes/images/groupon-logo1.png"/></figure>
     </nav>
 </header>
 <article class="deck-container">
@@ -38,11 +38,93 @@
 
 <section class="slide">
 	<h1>Spring 3.2</h1>
-    <h2>No more XML (In Dream Land)</h2>
+    <h2>Spring Evolution and improvements</h2>
 </section>
 
 <section class="slide">
-	<h1>Content</h1>
+	<h1>Time Machine</h1>
+    <p><img src="http://chasingbirdswithdrunkards.files.wordpress.com/2011/10/back-to-the-future.jpg"/></p>
+</section>
+
+<section class="slide">
+    <div class="slide">
+       <pre>
+            <code>
+                &lt;beans&gt;
+                &lt;bean id="foo" class="com.foo.Foo"/&gt;
+                &lt;bean id="bar" class="com.foo.Bar"&gt;
+                &lt;property name="foo" ref="foo"/&gt;
+                &lt;/bean&gt;
+                &lt;bean .../&gt;
+                &lt;bean .../&gt;
+                &lt;bean .../&gt;
+                &lt;bean .../&gt;
+                &lt;bean .../&gt;
+                &lt;bean .../&gt;
+                &lt;bean .../&gt;
+                &lt;/beans&gt;
+            </code>
+        </pre>
+    </div>
+    <div class="slide">
+        <pre>
+        <code>
+            &lt;beans&gt;
+            &lt;bean id="foo" class="com.foo.Foo"/&gt;
+            &lt;bean id="bar" class="com.foo.Bar"&gt;
+            &lt;property name="foo" ref="foo"/&gt;
+            &lt;/bean&gt;
+            &lt;bean .../&gt;
+            &lt;bean .../&gt;
+            &lt;bean .../&gt;
+            &lt;bean .../&gt;
+            &lt;bean .../&gt;
+            &lt;bean .../&gt;
+            &lt;bean .../&gt;
+            <span class="red">&lt;import resource="more-beans.xml"/&gt;</span>
+            &lt;/beans&gt;
+        </code>
+    </pre>
+    </div>
+</section>
+<section class="slide">
+    <pre>
+        <ul>
+            <li class="slide">verbose</li>
+            <li class="slide">not type-safe</li>
+            <li class="slide">special tooling</li>
+            <li class="slide">find in Path (where is this defined?)</li>
+        </ul>
+    </pre>
+</section>
+<section class="slide">
+    <pre>
+        <ul>
+            <li class="slide">Spring 2.0 namespace
+                <code>
+                    &lt;tx:annotation-driven/&gt;
+                    &lt;aop:aspectj-autoproxy/&gt;
+                    &lt;jee:jndi-lookup/&gt;
+                    &lt;util:list/&gt;
+                </code>
+            </li>
+
+            <li class="slide">Spring 2.5 annotations
+                <code>
+                    @Autowired
+                    @Component
+                    &lt;context:component-scan/&gt;
+                </code>
+            </li>
+            <li class="slide">Spring 3.0 More annotations
+                <code>
+                    @Bean
+                    @Configuration
+                </code>
+            </li>
+            <li class="slide">find in Path (where is this defined?)</li>
+        </ul>
+    </pre>
 </section>
 
 <section class="slide">

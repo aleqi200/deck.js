@@ -47,11 +47,13 @@ body > header {
     height: 32px;
     background: #000000;
     overflow: hidden;
+    position: relative;
+    z-index: 4;
 }
-header figure {
+body > nav > figure{
+    z-index: 10;
+    overflow: hidden;
     float: left;
-    position: absolute;
-    z-index: 100;
 }
 .deck-container > .slide {
   padding: 48px 48px;
@@ -249,4 +251,7 @@ header figure {
   -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.red{
+    color: red;
 }
