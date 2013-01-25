@@ -255,3 +255,7 @@ body > nav > figure{
 .red{
     color: red;
 }
+code .deck-current{
+    color: #a52a2a;
+    font-weight: bold;
+}

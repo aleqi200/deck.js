@@ -5,7 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=1024, user-scalable=no">
 
-	<title>Your deck.js Presentation</title>
+	<title>Spring MVC</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	
 	<!-- Required stylesheet -->
 	<link rel="stylesheet" href="core/deck.core.css">
@@ -93,7 +95,9 @@
             <li class="slide">verbose</li>
             <li class="slide">not type-safe</li>
             <li class="slide">special tooling</li>
-            <li class="slide">find in Path (where is this defined?)</li>
+            <li class="slide">find in Path (where is this defined?)
+                <img src="http://p3.publico.pt/sites/default/files/futurama_meme.jpg"/>
+            </li>
         </ul>
     </pre>
 </section>
@@ -122,14 +126,67 @@
                     @Configuration
                 </code>
             </li>
-            <li class="slide">find in Path (where is this defined?)</li>
         </ul>
     </pre>
 </section>
 
 <section class="slide">
-	<h1>Here</h1>
+    <pre>
+        <h3>Spring 3.1</h3>
+        <code>
+            @Enable*
+            @Import
+            @Profile("dev")
+        </code>
+        <ul>
+            <li class="slide">Servlet 3.0</li>
+            <li class="slide">Annotations (metadata)</li>
+            <li class="slide">Bye bye xml</li>
+            <li class="slide">Profile</li>
+        </ul>
+    </pre>
 </section>
+
+    <section class="slide">
+    <pre>
+        <code>
+            @Import(OtherConfig.class) <span class="slide">// =~ &lt;import/&gt;</span>
+            @Configuration
+            public class AppConfig {
+
+                @Autowired
+                MySuperBean bean; <span class="slide">// inject</span>
+
+
+                <span class="slide">// @Bean methods ~= &lt;bean/&gt; elements</span>
+                @Bean
+                public SomeService superService() {
+                MySuperService superService = ...;
+                superService.setSuperBean(bean); <span class="slide">// methods ~= &lt;property/&gt; elements</span>
+                return quoteService;
+                }
+
+            }
+        </code>
+    </pre>
+    </section>
+
+    <section class="slide">
+        <pre>
+            <ul>
+                <li class="slide">type-safe, object-oriented</li>
+                <li class="slide">can configure any component</li>
+                <li class="slide">complete programmatic control</li>
+                <li class="slide">no special tooling required</li>
+            </ul>
+        </pre>
+        <h1 class="slide">Where is this bean defined?</h1>
+
+    </section>
+
+    <section class="slide">
+	    <h1>Here</h1>
+    </section>
 
 <!-- End slides. -->
 
