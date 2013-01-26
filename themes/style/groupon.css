@@ -46,14 +46,18 @@ body > header {
     width: 100%;
     height: 32px;
     background: #000000;
-    overflow: hidden;
     position: relative;
-    z-index: 4;
+    z-index: 10;
 }
 body > nav > figure{
-    z-index: 10;
+    
     overflow: hidden;
     float: left;
+}
+#logo {
+    position: relative;
+    z-index: 9999;
+
 }
 .deck-container > .slide {
   padding: 48px 48px;
